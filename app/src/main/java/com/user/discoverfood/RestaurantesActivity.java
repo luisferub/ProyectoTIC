@@ -64,14 +64,6 @@ public class RestaurantesActivity extends AppCompatActivity {
         public void onPageSelected(int i) {
             addDotsIndicator(i);
             mCurrentPage = i;
-            if (i == mDots.length - 1) {
-                mPrevBtn.setEnabled(true);
-                mPrevBtn.setVisibility(View.VISIBLE);
-
-            } else {
-                mPrevBtn.setEnabled(false);
-                mPrevBtn.setVisibility(View.INVISIBLE);
-            }
         }
 
         @Override
