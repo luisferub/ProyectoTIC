@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void verRestaurantes(View view){
-        Intent intencion = new Intent(this, MapsActivity.class);
+        Intent intencion = new Intent(this, RestaurantesActivity.class);
         startActivity(intencion);
     }
 
