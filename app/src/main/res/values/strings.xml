@@ -2,10 +2,12 @@
     <string name="app_name">DiscoverFood</string>
     <string name="title_activity_login">Sign in</string>
     <string name="menu">Menu</string>
+    <string name="mapa">Ver Mapa</string>
     <string name="restaurantes">Ver restaurantes</string>
+    <string name="pedidos">Ver Pedidos</string>
     <string name="repartidores">Acceso repartidores</string>
     <string name="contacto">Contacto</string>
-    <string name="info">Información de contacto</string>
+    <string name="info">Información del cliente</string>
     <string name="logo">Logo</string>
 
     <!-- Strings related to login -->
