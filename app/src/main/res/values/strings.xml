@@ -2,13 +2,17 @@
     <string name="app_name">DiscoverFood</string>
     <string name="title_activity_login">Sign in</string>
     <string name="menu">Menu</string>
-    <string name="mapa">Ver Mapa</string>
+    <string name="mapa">Ver mapa</string>
     <string name="restaurantes">Ver restaurantes</string>
     <string name="pedidos">Ver Pedidos</string>
     <string name="repartidores">Acceso repartidores</string>
     <string name="contacto">Contacto</string>
-    <string name="info">Información del cliente</string>
+    <string name="contactoc">Contacto cliente</string>
+    <string name="info">Información de la Aplicación</string>
     <string name="logo">Logo</string>
+    <string name="volver">Volver al menú</string>
+    <string name="autor">Aplicación creada por: Luis Fernando Uribe</string>
+    <string name="email">Email: luis.uribeb@upb.edu.co</string>
 
     <!-- Strings related to menu -->
     <string name="nombre">Nombre:</string>

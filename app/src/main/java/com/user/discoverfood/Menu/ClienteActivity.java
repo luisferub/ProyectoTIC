@@ -13,7 +13,7 @@ import com.user.discoverfood.R;
 public class ClienteActivity extends AppCompatActivity {
 
     EditText n,t;
-    Button btn;
+    Button btn, volver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class ClienteActivity extends AppCompatActivity {
         n=(EditText)findViewById(R.id.etn);
         t=(EditText)findViewById(R.id.ett);
         btn=(Button)findViewById(R.id.btnc);
+        volver=(Button)findViewById(R.id.prevButton);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +36,13 @@ public class ClienteActivity extends AppCompatActivity {
                 else {
                     verMenu();
                 }
+            }
+        });
+
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

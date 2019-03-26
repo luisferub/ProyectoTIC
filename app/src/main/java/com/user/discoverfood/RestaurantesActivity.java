@@ -21,10 +21,7 @@ public class RestaurantesActivity extends AppCompatActivity {
     private Button mPrevBtn;
     private int mCurrentPage;
 
-    void verMain(View view){
-        Intent intencion = new Intent(this, MainActivity.class);
-        startActivity(intencion);
-    }
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +35,14 @@ public class RestaurantesActivity extends AppCompatActivity {
         mSlideViewPager.setAdapter(sliderAdapter);
         addDotsIndicator(0);
         mSlideViewPager.addOnPageChangeListener(viewListener);
+
+        btn=(Button)findViewById(R.id.prevButton);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     public void addDotsIndicator(int position) {
