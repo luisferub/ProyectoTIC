@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
+import com.user.discoverfood.Menu.ClienteActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    void verMenu(View view){
-        Intent intencion = new Intent(this, MenuActivity.class);
+    void verCliente(View view){
+        Intent intencion = new Intent(this, ClienteActivity.class);
         startActivity(intencion);
     }
 

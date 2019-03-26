@@ -10,6 +10,13 @@
     <string name="info">Información del cliente</string>
     <string name="logo">Logo</string>
 
+    <!-- Strings related to menu -->
+    <string name="nombre">Nombre:</string>
+    <string name="ingresarn">Ingrese su nombre</string>
+    <string name="telefono">Telefono:</string>
+    <string name="ingresart">Ingrese su telefono</string>
+    <string name="continuar">Continuar</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">Username</string>
     <string name="prompt_password">Password</string>
