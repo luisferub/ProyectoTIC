@@ -58,7 +58,7 @@ public class Menu2Activity extends AppCompatActivity implements android.widget.C
         if(MenuActivity.aux ==1) {
             filtroList.add(new Filtro("Pollo apanado"));
             filtroList.add(new Filtro("Picada de pollo"));
-            filtroList.add(new Filtro("Chuleta de pollo"));
+            filtroList.add(new Filtro("Nuggets"));
         }
         if(MenuActivity.aux==2) {
             filtroList.add(new Filtro("Hamburguesa"));
