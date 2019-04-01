@@ -11,9 +11,9 @@ import android.widget.Toast;
 import com.user.discoverfood.R;
 import java.util.ArrayList;
 
-public class MenuActivity extends AppCompatActivity implements android.widget.CompoundButton.OnCheckedChangeListener {
+public class Menu2Activity extends AppCompatActivity implements android.widget.CompoundButton.OnCheckedChangeListener {
 
-    static int aux=0;
+    static int auxiliar=0;
     int contador=0;
     ListView lv;
     ArrayList<Filtro> filtroList;
@@ -22,7 +22,7 @@ public class MenuActivity extends AppCompatActivity implements android.widget.Co
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_menu2);
 
         Button btn;
 
@@ -33,30 +33,43 @@ public class MenuActivity extends AppCompatActivity implements android.widget.Co
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(aux==0){
-                    Toast.makeText(MenuActivity.this,"Por favor elija una opción", Toast.LENGTH_LONG).show();
+                if(auxiliar==0){
+                    Toast.makeText(Menu2Activity.this,"Por favor elija una opción", Toast.LENGTH_LONG).show();
                 }
                 else if(contador==1){
-                    verMenu2();
+                    verPlato();
                 }
-                else{
-                    Toast.makeText(MenuActivity.this,"Por favor elija solamente una opción", Toast.LENGTH_LONG).show();
+                else {
+                    Toast.makeText(Menu2Activity.this,"Por favor elija solamente una opción", Toast.LENGTH_LONG).show();
                 }
             }
         });
 
     }
 
-    void verMenu2(){
-        Intent intencion = new Intent(this, Menu2Activity.class);
+    void verPlato(){
+        Intent intencion = new Intent(this, PlatoActivity.class);
         startActivity(intencion);
     }
 
     private void displayfiltroList(){
         filtroList = new ArrayList<Filtro>();
-        filtroList.add(new Filtro("Pollo"));
-        filtroList.add(new Filtro("Comida Rapida"));
-        filtroList.add(new Filtro("Comida Mexicana"));
+
+        if(MenuActivity.aux ==1) {
+            filtroList.add(new Filtro("Pollo apanado"));
+            filtroList.add(new Filtro("Picada de pollo"));
+            filtroList.add(new Filtro("Chuleta de pollo"));
+        }
+        if(MenuActivity.aux==2) {
+            filtroList.add(new Filtro("Hamburguesa"));
+            filtroList.add(new Filtro("Hamburguesa de pollo"));
+            filtroList.add(new Filtro("Helado"));
+        }
+        if (MenuActivity.aux==3){
+            filtroList.add(new Filtro("Burrito"));
+            filtroList.add(new Filtro("Quesadilla"));
+            filtroList.add(new Filtro("Tacos"));
+        }
 
         ftadapter= new ListAdapter(filtroList, this);
         lv.setAdapter(ftadapter);
@@ -76,13 +89,13 @@ public class MenuActivity extends AppCompatActivity implements android.widget.Co
                 contador--;
             }
             if(contador==0){
-                aux=0;
+                auxiliar=0;
             }
             if(contador==1){
                 for(int i=0; i<3; i++){
                     Filtro I = filtroList.get(i);
                     if(I.isSelected()==true){
-                        aux=i+1;
+                        auxiliar=i+1;
                     }
                 }
             }
