@@ -1,4 +1,4 @@
-package com.user.discoverfood.Menu;
+package com.user.discoverfood.Repartidor;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,10 +8,11 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.Toast;
+import com.user.discoverfood.Menu.PlatoActivity;
 import com.user.discoverfood.R;
-import java.util.ArrayList;
+import java.util.*;
 
-public class MenuActivity extends AppCompatActivity implements android.widget.CompoundButton.OnCheckedChangeListener {
+public class RepartidorActivity extends AppCompatActivity implements android.widget.CompoundButton.OnCheckedChangeListener{
 
     static int aux=0;
     int contador=0;
@@ -19,10 +20,13 @@ public class MenuActivity extends AppCompatActivity implements android.widget.Co
     ArrayList<Filtro> filtroList;
     ListAdapter ftadapter;
 
+    Iterator<String> nombreIterator = PlatoActivity.nombrelista.iterator();
+    Iterator<String> precioIterator = PlatoActivity.preciolista.iterator();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_repartidor);
 
         Button btn;
 
@@ -34,30 +38,31 @@ public class MenuActivity extends AppCompatActivity implements android.widget.Co
             @Override
             public void onClick(View v) {
                 if(aux==0){
-                    Toast.makeText(MenuActivity.this,"Por favor elija una opción", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RepartidorActivity.this,"Por favor elija una opción", Toast.LENGTH_LONG).show();
                 }
                 else if(contador==1){
-                    verMenu2();
+                    verRepartidor2();
                 }
                 else{
-                    Toast.makeText(MenuActivity.this,"Por favor elija solamente una opción", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RepartidorActivity.this,"Por favor elija solamente una opción", Toast.LENGTH_LONG).show();
                 }
             }
         });
 
     }
 
-    void verMenu2(){
-        Intent intencion = new Intent(this, Menu2Activity.class);
+    void verRepartidor2(){
+        Intent intencion = new Intent(this, Repartidor2Activity.class);
         startActivity(intencion);
     }
 
     private void displayfiltroList(){
         filtroList = new ArrayList<Filtro>();
-        filtroList.add(new Filtro("Pollo"));
-        filtroList.add(new Filtro("Comida Rapida"));
-        filtroList.add(new Filtro("Comida Mexicana"));
-
+        while (nombreIterator.hasNext()) {
+            String nombre = nombreIterator.next();
+            String precio = precioIterator.next();
+            filtroList.add(new Filtro(nombre + " / " + precio));
+        }
         ftadapter= new ListAdapter(filtroList, this);
         lv.setAdapter(ftadapter);
     }

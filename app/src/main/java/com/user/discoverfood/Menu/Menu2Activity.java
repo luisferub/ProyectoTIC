@@ -92,7 +92,7 @@ public class Menu2Activity extends AppCompatActivity implements android.widget.C
                 auxiliar=0;
             }
             if(contador==1){
-                for(int i=0; i<3; i++){
+                for(int i=0; i<filtroList.size(); i++){
                     Filtro I = filtroList.get(i);
                     if(I.isSelected()==true){
                         auxiliar=i+1;

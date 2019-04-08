@@ -8,6 +8,8 @@ import com.user.discoverfood.Menu.ClienteActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static int flag=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

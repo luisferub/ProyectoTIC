@@ -15,6 +15,9 @@ public class ClienteActivity extends AppCompatActivity {
     EditText n,t;
     Button btn, volver;
 
+    static String nom;
+    static String tel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +31,8 @@ public class ClienteActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nom = n.getText().toString().trim();
-                String tel = t.getText().toString().trim();
+                nom = n.getText().toString().trim();
+                tel = t.getText().toString().trim();
                 if(TextUtils.isEmpty(nom) || TextUtils.isEmpty(tel)){
                     Toast.makeText(ClienteActivity.this,"Ingrese su nombre y su telefono", Toast.LENGTH_LONG).show();
                 }

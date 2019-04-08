@@ -29,4 +29,8 @@
 
     <!-- Strings related to plato -->
     <string name="plato">Plato</string>
+
+    <!-- Strings related to repartidor -->
+    <string name="nopedido">No hay pedidos disponibles</string>
+
 </resources>

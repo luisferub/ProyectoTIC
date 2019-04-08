@@ -48,13 +48,15 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".RepartidorActivity" />
         <activity android:name=".InformacionActivity" />
         <activity android:name=".PedidosActivity" />
         <activity android:name=".Menu.ClienteActivity" />
         <activity android:name=".Menu.MenuActivity" />
         <activity android:name=".Menu.PlatoActivity" />
-        <activity android:name=".Menu.Menu2Activity"></activity>
+        <activity android:name=".Menu.Menu2Activity" />
+        <activity android:name=".Repartidor.RepartidorActivity" />
+        <activity android:name=".Repartidor.AuxiliarActivity" />
+        <activity android:name=".Repartidor.Repartidor2Activity"></activity>
     </application>
 
 </manifest>

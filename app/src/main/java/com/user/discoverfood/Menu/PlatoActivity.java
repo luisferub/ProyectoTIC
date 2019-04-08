@@ -2,16 +2,40 @@ package com.user.discoverfood.Menu;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+import com.user.discoverfood.MainActivity;
 import com.user.discoverfood.R;
+import java.util.*;
 
 public class PlatoActivity extends AppCompatActivity {
+
+    Button btnContinuar;
+
+    public static ArrayList<String> nombrelista = new ArrayList<String>();
+    public static ArrayList<String> preciolista = new ArrayList<String>();
+    String nombre;
+    String precio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plato);
+
+        btnContinuar=(Button)findViewById(R.id.contButton);
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nombrelista.add(nombre);
+                preciolista.add(precio);
+                Toast.makeText(PlatoActivity.this,"Pedido ordenado satisfactoriamente", Toast.LENGTH_LONG).show();
+                MainActivity.flag=1;
+                finish();
+            }
+        });
 
         // Frisby
 
@@ -53,9 +77,9 @@ public class PlatoActivity extends AppCompatActivity {
         };
 
         String[] plato2_desc = {
-                "Valor: $8000 c/u",
-                "Valor: $12000 c/u",
-                "Valor: $6000 c/u"
+                "Valor: $6000",
+                "Valor: $8000",
+                "Valor: $7900"
 
         };
 
@@ -76,15 +100,9 @@ public class PlatoActivity extends AppCompatActivity {
         };
 
         String[] plato3_desc = {
-                "Valor: $30000",
-                "Valor: $45000",
-                "Valor: $10900",
-                "Valor: $6000",
-                "Valor: $8000",
-                "Valor: $7900",
                 "Valor: $8000 c/u",
                 "Valor: $12000 c/u",
-                "Valor: $6000 c/u",
+                "Valor: $6000 c/u"
 
         };
 
@@ -98,16 +116,22 @@ public class PlatoActivity extends AppCompatActivity {
             platoImageView.setImageResource(plato1_images[position]);
             platoHeading.setText(plato1_headings[position]);
             platoDesc.setText(plato1_desc[position]);
+            nombre=plato1_headings[position];
+            precio=plato1_desc[position];
         }
         if(MenuActivity.aux==2) {
             platoImageView.setImageResource(plato2_images[position]);
             platoHeading.setText(plato2_headings[position]);
             platoDesc.setText(plato2_desc[position]);
+            nombre=plato2_headings[position];
+            precio=plato2_desc[position];
         }
         if(MenuActivity.aux==3) {
             platoImageView.setImageResource(plato3_images[position]);
             platoHeading.setText(plato3_headings[position]);
             platoDesc.setText(plato3_desc[position]);
+            nombre=plato3_headings[position];
+            precio=plato3_desc[position];
         }
     }
 }

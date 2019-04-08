@@ -42,10 +42,10 @@
     <TextView
         android:id="@+id/plato_desc"
         android:layout_width="248dp"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="241dp"
+        android:layout_marginBottom="114dp"
         android:text="@string/plato"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -55,5 +55,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/plato_image" />
+
+    <Button
+        android:id="@+id/contButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="19dp"
+        android:layout_marginEnd="19dp"
+        android:text="@string/continuar"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:visibility="visible" />
 
 </RelativeLayout>
