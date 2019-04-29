@@ -22,6 +22,13 @@ public class RepartidorActivity extends AppCompatActivity implements android.wid
 
     Iterator<String> nombreIterator = PlatoActivity.nombrelista.iterator();
     Iterator<String> precioIterator = PlatoActivity.preciolista.iterator();
+    Iterator<String> pedidoIterator = PlatoActivity.pedidolista.iterator();
+    Iterator<String> telefonoIterator = PlatoActivity.telefonolista.iterator();
+
+    static String nombreAux;
+    static String precioAux;
+    static String pedidoAux;
+    static String telefonoAux;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,10 +65,12 @@ public class RepartidorActivity extends AppCompatActivity implements android.wid
 
     private void displayfiltroList(){
         filtroList = new ArrayList<Filtro>();
-        while (nombreIterator.hasNext()) {
+        while (pedidoIterator.hasNext()) {
             String nombre = nombreIterator.next();
             String precio = precioIterator.next();
-            filtroList.add(new Filtro(nombre + " / " + precio));
+            String pedido = pedidoIterator.next();
+            String telefono = telefonoIterator.next();
+            filtroList.add(new Filtro(nombre,precio,pedido,telefono));
         }
         ftadapter= new ListAdapter(filtroList, this);
         lv.setAdapter(ftadapter);
@@ -90,6 +99,10 @@ public class RepartidorActivity extends AppCompatActivity implements android.wid
                         aux=i+1;
                     }
                 }
+                nombreAux=f.getNombre();
+                pedidoAux=f.getPedido();
+                telefonoAux=f.getTelefono();
+                precioAux=f.getPrecio();
             }
         }
     }

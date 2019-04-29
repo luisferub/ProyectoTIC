@@ -17,8 +17,12 @@ public class PlatoActivity extends AppCompatActivity {
 
     public static ArrayList<String> nombrelista = new ArrayList<String>();
     public static ArrayList<String> preciolista = new ArrayList<String>();
+    public static ArrayList<String> pedidolista = new ArrayList<String>();
+    public static ArrayList<String> telefonolista = new ArrayList<String>();
     String nombre;
     String precio;
+    String pedido;
+    String telefono;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,8 @@ public class PlatoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 nombrelista.add(nombre);
                 preciolista.add(precio);
+                pedidolista.add(pedido);
+                telefonolista.add(telefono);
                 Toast.makeText(PlatoActivity.this,"Pedido ordenado satisfactoriamente", Toast.LENGTH_LONG).show();
                 MainActivity.flag=1;
                 finish();
@@ -116,22 +122,28 @@ public class PlatoActivity extends AppCompatActivity {
             platoImageView.setImageResource(plato1_images[position]);
             platoHeading.setText(plato1_headings[position]);
             platoDesc.setText(plato1_desc[position]);
-            nombre=plato1_headings[position];
+            nombre=ClienteActivity.nom;
+            pedido=plato1_headings[position];
             precio=plato1_desc[position];
+            telefono=ClienteActivity.tel;
         }
         if(MenuActivity.aux==2) {
             platoImageView.setImageResource(plato2_images[position]);
             platoHeading.setText(plato2_headings[position]);
             platoDesc.setText(plato2_desc[position]);
-            nombre=plato2_headings[position];
+            nombre=ClienteActivity.nom;
+            pedido=plato2_headings[position];
             precio=plato2_desc[position];
+            telefono=ClienteActivity.tel;
         }
         if(MenuActivity.aux==3) {
             platoImageView.setImageResource(plato3_images[position]);
             platoHeading.setText(plato3_headings[position]);
             platoDesc.setText(plato3_desc[position]);
-            nombre=plato3_headings[position];
+            nombre=ClienteActivity.nom;
+            pedido=plato3_headings[position];
             precio=plato3_desc[position];
+            telefono=ClienteActivity.tel;
         }
     }
 }

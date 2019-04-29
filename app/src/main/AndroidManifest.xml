@@ -56,7 +56,8 @@
         <activity android:name=".Menu.Menu2Activity" />
         <activity android:name=".Repartidor.RepartidorActivity" />
         <activity android:name=".Repartidor.AuxiliarActivity" />
-        <activity android:name=".Repartidor.Repartidor2Activity"></activity>
+        <activity android:name=".Repartidor.Repartidor2Activity" />
+        <activity android:name=".Repartidor.InfopedidoActivity"></activity>
     </application>
 
 </manifest>

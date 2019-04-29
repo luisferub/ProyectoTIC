@@ -2,7 +2,6 @@
     <string name="app_name">DiscoverFood</string>
     <string name="title_activity_login">Sign in</string>
     <string name="menu">Menu</string>
-    <string name="mapa">Ver mapa</string>
     <string name="restaurantes">Ver restaurantes</string>
     <string name="pedidos">Ver Pedidos</string>
     <string name="repartidores">Acceso repartidores</string>
@@ -32,5 +31,6 @@
 
     <!-- Strings related to repartidor -->
     <string name="nopedido">No hay pedidos disponibles</string>
-
+    <string name="mapa">Ver mapa</string>
+    <string name="infopedido">Información pedido</string>
 </resources>
