@@ -46,10 +46,8 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".Repartidor.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".InformacionActivity" />
-        <activity android:name=".PedidosActivity" />
         <activity android:name=".Menu.ClienteActivity" />
         <activity android:name=".Menu.MenuActivity" />
         <activity android:name=".Menu.PlatoActivity" />

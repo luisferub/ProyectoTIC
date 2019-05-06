@@ -1,14 +1,14 @@
-package com.user.discoverfood;
+package com.user.discoverfood.Repartidor;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.user.discoverfood.R;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -28,7 +28,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         LatLng principal = new LatLng(6.242235, -75.589941);
-        mMap.addMarker(new MarkerOptions().position(principal).title("Discover Food").snippet("Cliente"));
+        mMap.addMarker(new MarkerOptions().position(principal).title(RepartidorActivity.nombreAux).snippet("Cliente"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(principal,15));
     }
 }

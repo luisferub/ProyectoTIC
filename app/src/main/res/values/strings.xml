@@ -33,4 +33,6 @@
     <string name="nopedido">No hay pedidos disponibles</string>
     <string name="mapa">Ver mapa</string>
     <string name="infopedido">Información pedido</string>
+    <string name="infocliente">Información cliente</string>
+
 </resources>

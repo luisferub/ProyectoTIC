@@ -100,7 +100,7 @@ public class PlatoActivity extends AppCompatActivity {
 
         String[] plato3_headings = {
                 "Burritos de carne",
-                "Quesadilla de carne",
+                "Quesadilla de pollo",
                 "Tacos al pastor"
 
         };

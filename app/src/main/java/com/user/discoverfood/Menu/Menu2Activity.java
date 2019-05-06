@@ -38,6 +38,7 @@ public class Menu2Activity extends AppCompatActivity implements android.widget.C
                 }
                 else if(contador==1){
                     verPlato();
+                    finish();
                 }
                 else {
                     Toast.makeText(Menu2Activity.this,"Por favor elija solamente una opción", Toast.LENGTH_LONG).show();

@@ -7,6 +7,23 @@
     android:background="@drawable/background"
     tools:context=".Repartidor.InfopedidoActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toTopOf="@+id/infopedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:srcCompat="@drawable/logo2" />
+
     <TextView
         android:id="@+id/pedido"
         android:layout_width="wrap_content"
@@ -14,10 +31,12 @@
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="163dp"
         android:layout_marginStart="163dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/logo"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/precio"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/infopedido" />
 
@@ -25,12 +44,13 @@
         android:id="@+id/precio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginEnd="163dp"
         android:layout_marginStart="163dp"
         android:layout_marginTop="10dp"
+        android:text="@string/logo"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/nombre"
+        app:layout_constraintBottom_toTopOf="@+id/infocliente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pedido" />
@@ -40,23 +60,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginStart="163dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginStart="175dp"
         android:layout_marginTop="10dp"
+        android:text="@string/logo"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/telefono"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/precio" />
+        app:layout_constraintTop_toBottomOf="@+id/infocliente" />
 
     <TextView
         android:id="@+id/telefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="240dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginStart="163dp"
+        android:layout_marginBottom="226dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginStart="175dp"
         android:layout_marginTop="10dp"
+        android:text="@string/logo"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,16 +88,33 @@
     <TextView
         android:id="@+id/infopedido"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginEnd="131dp"
         android:layout_marginStart="132dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="20dp"
         android:text="@string/infopedido"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/pedido"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/infocliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/infocliente"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/precio" />
 </android.support.constraint.ConstraintLayout>

@@ -7,13 +7,26 @@
     android:background="@drawable/background"
     tools:context=".Menu.PlatoActivity">
 
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toTopOf="@+id/contButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo2" />
+
     <TextView
         android:id="@+id/plato_head"
         android:layout_width="188dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="90dp"
         android:text="@string/plato"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -31,7 +44,7 @@
         android:layout_height="170dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="121dp"
+        android:layout_marginTop="140dp"
         android:contentDescription="@string/plato"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
@@ -45,7 +58,7 @@
         android:layout_height="150dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="114dp"
+        android:layout_marginBottom="92dp"
         android:text="@string/plato"
         android:textAlignment="center"
         android:textAllCaps="false"
