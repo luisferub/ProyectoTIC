@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_toEndOf="@+id/logo2"
+        android:backgroundTint="@android:color/holo_orange_light"
         android:text="@string/continuar"
         android:textAlignment="center"
         android:visibility="visible"
