@@ -16,7 +16,7 @@ public class InfopedidoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_infopedido);
 
         nombre = (TextView) findViewById(R.id.nombre);
-        nombre.setText(RepartidorActivity.nombreAux);
+        nombre.setText("Cliente: " + RepartidorActivity.nombreAux);
 
         precio = (TextView) findViewById(R.id.precio);
         precio.setText(RepartidorActivity.precioAux);
@@ -25,6 +25,6 @@ public class InfopedidoActivity extends AppCompatActivity {
         pedido.setText(RepartidorActivity.pedidoAux);
 
         telefono = (TextView) findViewById(R.id.telefono);
-        telefono.setText(RepartidorActivity.telefonoAux);
+        telefono.setText("Telefono: " + RepartidorActivity.telefonoAux);
     }
 }

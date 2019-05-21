@@ -9,7 +9,7 @@
     <string name="contactoc">Contacto cliente</string>
     <string name="info">Información de la Aplicación</string>
     <string name="logo">Logo</string>
-    <string name="volver">Volver al menú</string>
+    <string name="volver">Volver al inicio</string>
     <string name="autor">Aplicación creada por: Luis Fernando Uribe</string>
     <string name="email">Email: luis.uribeb@upb.edu.co</string>
 
@@ -19,6 +19,7 @@
     <string name="telefono">Telefono:</string>
     <string name="ingresart">Ingrese su telefono</string>
     <string name="continuar">Continuar</string>
+    <string name="direccion">Usar mi ubicación actual</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Username</string>

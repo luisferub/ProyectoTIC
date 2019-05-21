@@ -1,5 +1,12 @@
 package com.user.discoverfood.Menu;
 
+import android.Manifest;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,30 +20,55 @@ import java.util.*;
 
 public class PlatoActivity extends AppCompatActivity {
 
-    Button btnContinuar;
+    Button btnUbicacion;
 
     public static ArrayList<String> nombrelista = new ArrayList<String>();
     public static ArrayList<String> preciolista = new ArrayList<String>();
     public static ArrayList<String> pedidolista = new ArrayList<String>();
     public static ArrayList<String> telefonolista = new ArrayList<String>();
+    public static ArrayList<String> latitudlista = new ArrayList<String>();
+    public static ArrayList<String> longitudlista = new ArrayList<String>();
     String nombre;
     String precio;
     String pedido;
     String telefono;
+    String latitud;
+    String longitud;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plato);
 
-        btnContinuar=(Button)findViewById(R.id.contButton);
-        btnContinuar.setOnClickListener(new View.OnClickListener() {
+        btnUbicacion=(Button)findViewById(R.id.contButton);
+        btnUbicacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (ActivityCompat.checkSelfPermission(PlatoActivity.this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(PlatoActivity.this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    return;
+                }
+
+                LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+                Location location = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+
+                if(location==null){
+                    Toast.makeText(PlatoActivity.this,"Por favor active la ubicación", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                double latitude = location.getLatitude();
+                double longitude = location.getLongitude();
+                latitud= String.valueOf(latitude);
+                longitud= String.valueOf(longitude);
+                latitudlista.add(latitud);
+                longitudlista.add(longitud);
+
                 nombrelista.add(nombre);
                 preciolista.add(precio);
                 pedidolista.add(pedido);
                 telefonolista.add(telefono);
+
                 Toast.makeText(PlatoActivity.this,"Pedido ordenado satisfactoriamente", Toast.LENGTH_LONG).show();
                 MainActivity.flag=1;
                 finish();

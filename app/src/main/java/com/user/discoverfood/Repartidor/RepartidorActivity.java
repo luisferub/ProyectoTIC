@@ -24,11 +24,15 @@ public class RepartidorActivity extends AppCompatActivity implements android.wid
     Iterator<String> precioIterator = PlatoActivity.preciolista.iterator();
     Iterator<String> pedidoIterator = PlatoActivity.pedidolista.iterator();
     Iterator<String> telefonoIterator = PlatoActivity.telefonolista.iterator();
+    Iterator<String> latitudIterator = PlatoActivity.latitudlista.iterator();
+    Iterator<String> longitudIterator = PlatoActivity.longitudlista.iterator();
 
     static String nombreAux;
     static String precioAux;
     static String pedidoAux;
     static String telefonoAux;
+    static String latitudAux;
+    static String longitudAux;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +74,9 @@ public class RepartidorActivity extends AppCompatActivity implements android.wid
             String precio = precioIterator.next();
             String pedido = pedidoIterator.next();
             String telefono = telefonoIterator.next();
-            filtroList.add(new Filtro(nombre,precio,pedido,telefono));
+            String latitud = latitudIterator.next();
+            String longitud = longitudIterator.next();
+            filtroList.add(new Filtro(nombre,precio,pedido,telefono,latitud,longitud));
         }
         ftadapter= new ListAdapter(filtroList, this);
         lv.setAdapter(ftadapter);
@@ -103,6 +109,9 @@ public class RepartidorActivity extends AppCompatActivity implements android.wid
                 pedidoAux=f.getPedido();
                 telefonoAux=f.getTelefono();
                 precioAux=f.getPrecio();
+                latitudAux=f.getLatitud();
+                longitudAux=f.getLongitud();
+
             }
         }
     }

@@ -19,15 +19,19 @@ class Filtro {
     String precio;
     String pedido;
     String telefono;
+    String latitud;
+    String longitud;
 
     boolean selected = false;
 
-    public Filtro(String nombre, String precio, String pedido, String telefono) {
+    public Filtro(String nombre, String precio, String pedido, String telefono, String latitud, String longitud) {
         super();
         this.nombre=nombre;
         this.precio=precio;
         this.pedido=pedido;
         this.telefono=telefono;
+        this.latitud=latitud;
+        this.longitud=longitud;
     }
 
     public String getNombre() {
@@ -46,6 +50,14 @@ class Filtro {
         return telefono;
     }
 
+    public String getLatitud() {
+        return latitud;
+    }
+
+    public String getLongitud() {
+        return longitud;
+    }
+
     public void setNombre(String nombre) {
         this.nombre=nombre;
     }
@@ -60,6 +72,14 @@ class Filtro {
 
     public void setTelefono(String telefono) {
         this.telefono=telefono;
+    }
+
+    public void setLatitud(String latitud) {
+        this.latitud=latitud;
+    }
+
+    public void setLongitud(String longitud) {
+        this.longitud=longitud;
     }
 
     public boolean isSelected() {
@@ -88,6 +108,8 @@ public class ListAdapter extends ArrayAdapter<Filtro> {
         public TextView filtroPrecio;
         public TextView filtroPedido;
         public TextView filtroTelefono;
+        public TextView filtroLatitud;
+        public TextView filtroLongitud;
         public CheckBox cBox;
     }
 
@@ -106,6 +128,8 @@ public class ListAdapter extends ArrayAdapter<Filtro> {
             holder.filtroPrecio=(TextView) v.findViewById(R.id.precio);
             holder.filtroPedido=(TextView) v.findViewById(R.id.pedido);
             holder.filtroTelefono=(TextView) v.findViewById(R.id.telefono);
+            holder.filtroLatitud=(TextView) v.findViewById(R.id.latitud);
+            holder.filtroLongitud=(TextView) v.findViewById(R.id.longitud);
             holder.cBox=(CheckBox) v.findViewById(R.id.cbox);
 
             holder.cBox.setOnCheckedChangeListener((CompoundButton.OnCheckedChangeListener) context);
@@ -120,6 +144,8 @@ public class ListAdapter extends ArrayAdapter<Filtro> {
         holder.filtroPrecio.setText(f.getPrecio());
         holder.filtroPedido.setText(f.getPedido());
         holder.filtroTelefono.setText(f.getTelefono());
+        holder.filtroLatitud.setText(f.getLatitud());
+        holder.filtroLongitud.setText(f.getLongitud());
         holder.cBox.setChecked(f.isSelected());
         holder.cBox.setTag(f);
 

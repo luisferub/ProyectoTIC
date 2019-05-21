@@ -38,7 +38,12 @@ public class ClienteActivity extends AppCompatActivity {
                     Toast.makeText(ClienteActivity.this,"Ingrese su nombre y su telefono", Toast.LENGTH_LONG).show();
                 }
                 else {
-                    verMenu();
+                    if(tel.length()!=10){
+                        Toast.makeText(ClienteActivity.this,"Ingrese un telefono válido", Toast.LENGTH_LONG).show();
+                    }
+                    else {
+                        verMenu();
+                    }
                 }
             }
         });
